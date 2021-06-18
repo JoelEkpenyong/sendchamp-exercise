@@ -34,13 +34,17 @@ const Balance = () => {
 
     let initalBalance = balance;
 
+    let newBalance = initalBalance + depositing;
+
     let newRecord = {
       title: "fund_wallet",
       amount: depositing.toFixed(1),
       date: new Date().toLocaleDateString(),
+      prevBalance: initalBalance,
+      transactionRefrence: "MNFY|65|20210618032033|001095",
+      status: "success",
+      newBalance: newBalance,
     };
-
-    let newBalance = initalBalance + depositing;
 
     let newTransactionHistory = [{ ...newRecord }, ...initalTransHistory];
 

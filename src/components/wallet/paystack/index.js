@@ -1,9 +1,17 @@
 import React from "react";
 import { Box, Circle, Flex, HStack, Text } from "@chakra-ui/react";
 
-const Paystack = ({ title, amount, date }) => {
+const Paystack = ({ title, amount, date, onClick }) => {
   return (
-    <Box as="div" borderBottomWidth={1} cursor="pointer" py={5} my={1}>
+    <Box
+      as="button"
+      borderBottomWidth={1}
+      cursor="pointer"
+      py={5}
+      my={1}
+      w="100%"
+      onClick={onClick}
+    >
       <Flex justifyContent="space-between" alignItems="center">
         <HStack spacing={3}>
           <Circle bg="primary.100" w={50} h={50}>
@@ -25,7 +33,7 @@ const Paystack = ({ title, amount, date }) => {
               </svg>
             </Text>
           </Circle>
-          <Box>
+          <Box textAlign="start">
             <Text textTransform="uppercase" fontSize={18}>
               {title}
             </Text>
