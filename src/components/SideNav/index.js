@@ -21,7 +21,13 @@ const SideNav = () => {
       top={0}
       left={0}
     >
-      <Flex p={5} justifyContent="space-between" alignItems="center" w="100%">
+      <Flex
+        px={5}
+        py={3}
+        justifyContent="space-between"
+        alignItems="center"
+        w="100%"
+      >
         {isNavOpen && <LogoWhite />}
         <Text as="button" onClick={() => setIsNavOpen(!isNavOpen)}>
           <svg

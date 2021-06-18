@@ -5,7 +5,7 @@ export const transactionHistory = atom({
   default: [
     {
       title: "test_credit",
-      date: "16/01/2021",
+      date: "01/16/2021",
       amount: "70500",
     },
   ],

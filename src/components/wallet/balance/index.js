@@ -42,8 +42,6 @@ const Balance = () => {
 
     let newBalance = initalBalance + depositing;
 
-    console.log(initalBalance, depositing, newBalance);
-
     let newTransactionHistory = [{ ...newRecord }, ...initalTransHistory];
 
     setBalance(newBalance);

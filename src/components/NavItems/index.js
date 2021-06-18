@@ -12,7 +12,15 @@ const NavItems = () => {
       const { title, navItems } = navSection;
 
       const renderNavItems = navItems.map((navObj, idx) => (
-        <HStack as="li" py={3} key={idx} color={navObj.active && "primary.500"}>
+        <HStack
+          as="li"
+          py={3}
+          key={idx}
+          textAlign="center"
+          color={navObj.active && "primary.500"}
+          display="flex"
+          justifyContent={!isNavOpen && "center"}
+        >
           <Text fontSize="xl" as="span" textTransform="capitalize">
             {navObj.icon}
           </Text>
@@ -25,7 +33,14 @@ const NavItems = () => {
       ));
 
       return (
-        <Box key={idx} as="div" w="100%" p={5} color="white">
+        <Box
+          key={idx}
+          as="div"
+          w="100%"
+          p={isNavOpen && 5}
+          px={isNavOpen && 7}
+          color="white"
+        >
           {isNavOpen && (
             <Text textTransform="uppercase" fontSize="xs" fontWeight={900}>
               {title}
